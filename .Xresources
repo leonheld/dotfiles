@@ -4,14 +4,34 @@ Xft.hintstyle: hintfulls
 Xft.rgba: none
 Xft*hinting: true
 Xft*autohint: true
-XTerm*dpi: 96
-XTerm*faceName: Fira Code Retina
-XTerm*faceSize: 14
-XTerm*renderFont: true
-XTerm*savelines: 500
-XTerm*fullscreen: never
 
-!double-click to select whole URLs :D
+xterm*dpi: 96
+xterm*faceName: Roboto Mono
+xterm*faceSize: 12
+xterm*renderFont: true
+xterm*savelines: 500
+xterm*fullscreen: never
+
+!Copicola
+xterm*VT100.Translations: #override \
+    Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+    Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
+
+
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT font menu: Tiny
+xterm*faceSize2: 10
+! VT font menu: Medium
+xterm*faceSize3: 12
+! VT font menu: Large
+xterm*faceSize4: 16
+! VT font menu: Huge
+xterm*faceSize5: 22
+
+!double-click to select whole URLs
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 gruvbox dark
